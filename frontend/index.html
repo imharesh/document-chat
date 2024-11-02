@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG ChatBot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <!-- Upload Section -->
+            <div class="upload-container">
+                <label for="fileInput" class="new-chat-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 5v14M5 12h14"/>
+                    </svg>
+                    Upload New File
+                </label>
+                <input type="file" id="fileInput" accept=".pdf" multiple style="display: none">
+            </div>
+
+            <!-- File List -->
+            <div class="conversations-container">
+                <div id="fileList" class="conversation-list"></div>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="main-content">
+            <!-- Chat Container -->
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages"></div>
+                
+                <!-- Chat Input -->
+                <div class="chat-input-container">
+                    <form id="chatForm">
+                        <div class="input-wrapper">
+                            <input type="text" id="messageInput" placeholder="Send a message...">
+                            <button type="submit">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
